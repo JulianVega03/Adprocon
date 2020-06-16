@@ -1,0 +1,17 @@
+footer
+{
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em 0;
+    width: 85%;
+}
+
+.footer__text { color: $rojo; }
+
+.footer__text--bold
+{
+    color: $rojo;
+    font-weight: bold;
+}

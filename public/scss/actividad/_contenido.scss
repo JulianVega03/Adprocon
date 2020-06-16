@@ -1,0 +1,98 @@
+.actividad
+{
+    width: 100%;
+}
+
+.actividad__content
+{
+    margin: 0 auto;
+    padding: 3em 0;
+    width: 95%;
+}
+
+.actividad-titles
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+.actividad-titles i
+{
+    color: red;
+    cursor: pointer;
+    font-size: 30px;
+    transition: .5s;
+}
+
+.actividad-titles__content
+{
+
+}
+
+.actividad-titles__project
+{
+    align-items: center;
+    display: flex;
+    font-weight: 400;
+    font-size: 20px
+}
+
+.actividad-titles__project p
+{
+    padding-left: 10px;
+}
+
+.actividad-titles__name
+{
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+}
+
+.actividad-titles__name span
+{
+    align-items: center;
+    display: flex;
+}
+
+.actividad-titles__name span p
+{
+    padding-left: 10px;
+}
+
+.actividad-titles__name i
+{
+    padding-right: 10px;
+}
+
+.opciones-actividad
+{
+    background-color: #DEDEDE;
+    width: 100%;
+}
+
+.opciones-actividad__content
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 95%;
+}
+
+.opciones-actividad__content i{
+    cursor: pointer;
+}
+
+.opciones-actividad__content li{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.opciones-actividad__content li:hover {
+    color: red;
+}

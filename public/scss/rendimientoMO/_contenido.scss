@@ -1,0 +1,20 @@
+.opciones-manoDeobra
+{
+    display: flex;
+    padding-top: 20px;
+    // flex-direction: row-reverse;
+    border-top: 0;
+    width: 99.5%;
+}
+
+.opciones-manoDeobra a
+{
+    color: #555555;
+    font-weight: bold;
+    padding-right: 30px;
+}
+
+.opciones-manoDeobra a:hover
+{
+    color: black;
+}

@@ -1,0 +1,109 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.login
+{
+    position: relative;
+    width: 100%;
+}
+
+.login__content
+{
+    align-items: center;
+    border: .5px solid #B2B2B2;
+    border-right: 0;
+    border-radius: 8px;
+    display: flex;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 800px;
+}
+
+.login__form
+{
+    width: 50%;
+}
+
+.login__form__content
+{
+    height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 65%;
+}
+
+.login__form__content--h2
+{
+    padding-bottom: 1em;
+}
+
+.login__form__container-cmp
+{
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.login__form__content--cmp
+{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #B2B2B2;
+    height: 100%;
+    flex-basis: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+}
+
+.login__form__content--cmp:focus 
+{
+    border: 1px solid black;
+}
+
+.login__form__content--btn
+{
+    background-color: $rojo;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 33px;
+    margin-bottom: 1em;
+    transition: .5s;
+    width: 100%;
+}
+
+.login__form__content--btn:hover
+{
+    background-color: $vinotinto;
+}
+
+.login__form__content--a
+{
+    color: $rojo;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.login__fig
+{
+    height: 100%;
+    width: 50%;
+}
+
+.login__img
+{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}

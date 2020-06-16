@@ -1,0 +1,41 @@
+$rojo: #E2061A;
+$gris: #f2f2f2;
+$gris2: #9F9F9F;
+$vinotinto: #B80000;
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/cabecera";
+@import "index/index";
+@import "login/login";
+@import "perfil-residente/pr";
+@import "perfil-residente/footer";
+@import "proyecto/contenido";
+@import "proyecto/tabla";
+@import "actividad/contenido";
+@import "modal/modal";
+@import "modulosmenu/menu";
+@import "rendimientoMO/contenido";
+
+*
+{
+    border: 0;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+body
+{
+    overflow-x: hidden;
+    position: relative;
+}
+
+.contenedor-body
+{
+    position: relative;
+}

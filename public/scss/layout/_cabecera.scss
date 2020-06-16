@@ -1,0 +1,61 @@
+.cabecera
+{
+    background-color: $rojo;
+    width: 100%;
+}
+
+.cabecera__content
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: .5em 0;
+    width: 95%;
+}
+
+.cabecera__fig
+{
+    width: 130px;
+}
+
+.cabecera__fig--img
+{
+    width: 100%;
+}
+
+.cabecera__menu
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecera__item
+{
+    align-items: center;
+    display: flex;
+    padding-right: 1em;
+}
+
+.cabecera__item img
+{
+    border-radius: 100%;
+    height: 35px;
+    margin-right: 15px;
+    width: 35px;
+}
+
+.cabecera__item--a
+{
+    color: white;
+    font-weight: bold;
+}
+
+.cabecera__menu i
+{
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+}

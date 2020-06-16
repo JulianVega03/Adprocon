@@ -1,0 +1,113 @@
+.modal
+{
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    visibility: hidden;
+    transition-duration: .5s;
+}
+
+.abrir 
+{
+    cursor: pointer;
+}
+
+.modal__content
+{
+    border-radius: 10px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.modal__content form
+{
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    z-index: 1001;
+}
+
+.modal__content form div
+{
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.modal__content form p
+{
+    font-size: 25px;
+    padding-bottom: 1em;
+}
+
+
+.modal__content form i
+{
+    cursor: pointer;
+    color: red;
+    font-size: 30px;
+    padding-top: 10px;
+    // transition-duration: .5s;
+}
+
+.modal__content form i:hover
+{
+    color:black;
+}
+
+.modal__content form div input
+{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #B2B2B2;
+    height: 100%;
+    flex-basis: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+}
+
+.btn-red
+{
+    background-color: #E2061A;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 33px;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.btn-gris
+{
+    background-color: #888888;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 33px;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.btn-gris:hover 
+{
+    background-color:#424242;
+}
+
+.btn-red:hover{
+    background-color:black;
+}
