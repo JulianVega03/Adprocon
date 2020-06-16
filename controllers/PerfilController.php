@@ -9,7 +9,7 @@ class PerfilController extends Controller
     public function actionIndex()
     {
         $datos = ["titulo" => "Perfil"];
-        $this->view('perfil/index',$datos);
+        $this->view('perfil',$datos);
     }
 
    

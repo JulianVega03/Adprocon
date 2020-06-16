@@ -5,7 +5,7 @@ require_once 'entities/Proyecto.php';
 class ProyectoModel extends Model
 {
 
-    public function insert($proyecto)
+    public function insertar($proyecto)
     {
         $query = $this->db->connect()->prepare('INSERT INTO proyecto (id_proyecto, nombre, responsable, descripcion) VALUES(:id, :nombre, :responsable, :descripcion)');
         try {
@@ -21,7 +21,7 @@ class ProyectoModel extends Model
         }
     }
 
-    public function get()
+    public function obtener()
     {
         $items = [];
         try {
@@ -41,7 +41,7 @@ class ProyectoModel extends Model
         }
     }
 
-    public function getById($id)
+    public function obtenerPorId($id)
     {
         $item = new Proyecto();
         $query = $this->db->connect()->prepare("SELECT * FROM proyecto WHERE id_proyecto = :id");
@@ -60,7 +60,7 @@ class ProyectoModel extends Model
         }
     }
 
-    public function update($proyecto)
+    public function actualizar($proyecto)
     {
         $query = $this->db->connect()->prepare("UPDATE proyecto SET nombre = :nombre, responsable = :responsable, descripcion = :descripcion WHERE id_proyecto = :id");
         try {
@@ -76,7 +76,7 @@ class ProyectoModel extends Model
         }
     }
 
-     public function delete($id){
+     public function eliminar($id){
          $query = $this->db->connect()->prepare("DELETE FROM proyecto WHERE id_proyecto = :id");
          try{
              $query->execute($id);
