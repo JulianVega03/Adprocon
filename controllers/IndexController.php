@@ -11,12 +11,5 @@ class IndexController extends Controller
         $datos = ["titulo" => "Bienvenidos"];
         $this->view('index',$datos);
     }
-
-    public function actionLogin()
-    {
-        $datos = ["titulo" => "Login App"];
-        $this->view('login',$datos);
-    }
-
     
 }

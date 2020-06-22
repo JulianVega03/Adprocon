@@ -7,6 +7,7 @@ class ProyectoModel extends Model
 
     public function insertar($proyecto)
     {
+        var_dump($proyecto);
         $query = $this->db->connect()->prepare('INSERT INTO proyecto (id_proyecto, nombre, responsable, descripcion) VALUES(:id, :nombre, :responsable, :descripcion)');
         try {
             $query->execute([
@@ -79,8 +80,12 @@ class ProyectoModel extends Model
      public function eliminar($id){
          $query = $this->db->connect()->prepare("DELETE FROM proyecto WHERE id_proyecto = :id");
          try{
-             $query->execute($id);
-             return true;
+             $query->execute(['id' => $id]);
+             if ($query->rowCount() > 0) {
+                return true;
+            } else {
+                return false;
+            }
          }catch(PDOException $e){
              return false;
          }

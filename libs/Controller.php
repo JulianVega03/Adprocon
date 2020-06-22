@@ -24,7 +24,7 @@ class Controller
 
                 require_once 'views/residente/' . $view . '.php';
             } else {
-                header('location:' . URL . 'perfil');
+                header('location:' . URL . 'proyectos');
             }
         } else {
             if (file_exists('views/' . $view . '.php')) {

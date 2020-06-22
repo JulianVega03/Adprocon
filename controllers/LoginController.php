@@ -24,7 +24,7 @@ class LoginController extends Controller
 
             if($this->usuario->existeUsuario($user, $pass)){
                 $_SESSION['user'] = $user;
-                header("location: " .URL ."perfil" );
+                header("location: " .URL ."proyectos" );
 
             }else{
                     echo "NO EXISTE";

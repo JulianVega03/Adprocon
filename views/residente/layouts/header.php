@@ -24,9 +24,9 @@
             <ul class="cabecera__menu">
                 <li class="cabecera__item">
                     <img src="<?= URL ?>public/imagen/imgperfil.jpg">
-                    <a class="cabecera__item--a" href="ayuda.php">Brayan Ismael Peñaranda Rincón</a>
+                    <a class="cabecera__item--a" href="ayuda.php"><?=$_SESSION['user']?></a>
                 </li>
-                <a href="<?= URL ?>login/logout"><i class="fas fa-bars"></i></a>
+                <a href="<?= URL ?>login/logout" ><i class="fas fa-sign-out-alt" alt="salir"></i></a>
             </ul>
         </nav>
     </header>
