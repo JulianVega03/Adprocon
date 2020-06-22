@@ -16,54 +16,20 @@ require 'views/residente/layouts/header.php';
                 <?php
                 foreach ($proyectos as $proyecto) {
                 ?>
-                    <span class="panel-redisente__bottom__post" href="proyecto.html" style="padding:8px 3px">
+                    <span class="panel-redisente__bottom__post" style="padding:8px 3px">
                         <div>
                             <i class="fas fa-folder-open"></i>
-                            <p class="panel-redisente__bottom__post--txt"><?= $proyecto->getNombre() ?> &nbsp;&nbsp; </p>
+                            <p class="panel-redisente__bottom__post--txt"><a href="<?= URL ?>proyectos/ingresar/<?= $proyecto->getId_proyecto() ?>"><?= $proyecto->getNombre() ?></a> &nbsp;&nbsp; </p>
                             <a href="#" class="abriredit"><i class="far fa-edit"></i></a> &nbsp;
                             <a href="<?= URL ?>proyectos/eliminar/<?= $proyecto->getId_proyecto() ?>"><i class="fas fa-trash-alt"></i></a>
                         </div>
                     </span>
-
-                    <div class="editar">
-                        <div class="modal__content">
-                            <form action="<?= URL ?>proyectos/nuevo" method="post">
-                                <p>Editar proyecto</p>
-                                <div>
-                                    <input type="text" placeholder="Nombre" id="nombreproyecto" name="nombre" required>
-                                </div>
-                                <div style="display:flex; flex-direction:column;">
-                                    <label for="">Responsable</label>
-                                    <select name='responsable' class="form-control" required style="font-size:19px; margin-bottom: 10px">
-                                        <?php
-                                        foreach ($personas as $responsable) {
-                                        ?>
-                                            <option value="<?= $responsable->getCedula() ?>">
-                                                <?= $responsable->getNombre() ?> <?= $responsable->getApellido() ?>
-                                            </option>
-                                        <?php
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="descripcion" id="cuadrilla" name="descripcion" required>
-                                </div>
-
-                                <button class="btn-red" type="submit">Agregar</button>
-                                <button class="btn-gris" type="reset">Borrar información</button>
-                                <i class="fas fa-times-circle cerraredit"></i>
-                            </form>
-                        </div>
-                    </div>
-
-
                 <?php
                 }
                 ?>
             </div>
         </div>
-        <div>
+        <div style="padding: 10px;">
             <div class="agregar-proyecto">
                 <div class="detalles-proyecto__content agregar-proyecto__content">
                     <div class="agregar-proyecto__title abrir">
@@ -79,7 +45,7 @@ require 'views/residente/layouts/header.php';
                 <div class="detalles-proyecto__content">
                     <div class="detalles-proyecto__title">
                         <p>Detalles</p>
-                        <!-- <span class="icon-notification"></span> -->
+
                         <i class="fas fa-exclamation-circle"></i>
                     </div>
                     <li><i class="fas fa-folder-open"></i>Proyecto</li>
@@ -138,7 +104,7 @@ require 'views/residente/layouts/header.php';
 <br>
 <br><br>
 
-<script src="<?=URL?>public/"></script>
+<script src="<?= URL ?>public/"></script>
 <?php
 require 'views/residente/layouts/footer.php';
 ?>

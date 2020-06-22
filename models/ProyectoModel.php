@@ -47,7 +47,7 @@ class ProyectoModel extends Model
         $item = new Proyecto();
         $query = $this->db->connect()->prepare("SELECT * FROM proyecto WHERE id_proyecto = :id");
         try {
-            $query->execute($id);
+            $query->execute(['id'=>$id]);
 
             while ($row = $query->fetch()) {
                 $item->setId_proyecto($row['id_proyecto']);

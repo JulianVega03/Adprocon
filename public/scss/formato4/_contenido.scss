@@ -1,0 +1,243 @@
+.contenedor-formato4
+{
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.formato4-title
+{
+    background-color: #C6DDF0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formato4-title-txt
+{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    text-align: center;
+}
+
+.formato4-title-txt h4
+{
+    margin: 0 auto;
+}
+
+.formato4-version
+{
+    width: 30%;
+    height: 45px;
+}
+
+.formato4-version p
+{
+    padding-left: 10px;
+    padding-top: 5px;
+    margin: 0 auto;
+}
+
+.formato4-nameproject
+{
+    align-items: center;
+    display: flex;
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.formato4-nameproject p
+{
+    color: black;
+}
+
+.formato4-nameproject input
+{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.formato4-date-equipo
+{
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.formato4-equipo
+{
+    align-items: center;
+    display: flex;
+}
+
+.formato4-equipo input
+{
+    margin: 0 10px;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+    width: 600px;
+}
+
+.formato4-date__content
+{
+    display: grid;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.formato4-date__content div
+{
+    padding-top: 10px;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.formato4-date__content div:last-child
+{
+    border-right: 0;
+}
+
+.col2 div:last-child
+{
+    padding-top: 0;
+}
+
+.formato4-date__content div:first-child
+{
+    padding-top: 0px;
+}
+
+.formato4-date__li
+{
+    border-right: 1px solid black;
+    padding: 3px 0;
+}
+
+.formato4-date__li:last-child
+{
+    border-right: 0px;
+}
+
+.formato4-date__li p
+{
+    text-align: center;
+}
+
+.col2
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.flexrow
+{
+    padding: 0;
+}
+
+.flexrow li
+{
+    text-align: center;
+}
+
+.flexrow p
+{
+    text-align: center;
+}
+
+.col3
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.datosActividadRealizada, .datosRecibo, .datosDMA, .col2-hora
+{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.centerT
+{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.borderT
+{
+    border-top: 1px solid black;
+}
+
+.borderB
+{
+    border-bottom: 1px solid black;
+}
+
+.borderL
+{
+    border-left: 1px solid black;
+}
+
+.borderR
+{
+    border-right: 1px solid black;
+}
+
+.col4
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.titleActividadRealizada 
+{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.col4 li
+{
+    text-align: center;
+}
+
+.celda 
+{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.datosHorometro div 
+{
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+
+
+.datosHorometro div:first-child
+{
+    border-bottom: 1px solid black;
+}
+
+.celda:first-child
+{
+    padding-top: 0px;
+}
+
+.titleDisposicionE 
+{
+    text-align: center;
+}
+
+.flexrow1
+{
+    display: flex;
+}

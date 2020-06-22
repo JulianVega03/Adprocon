@@ -10,6 +10,16 @@ class Actividad
     private $id_cuadrilla;
     private $fecha;
 
+    function __construct($id = null, $id_proyecto = null, $nombre = null, $ubicacion = null, $id_cuadrilla = null, $fecha = null)
+    {
+        $this->id = $id;
+        $this->id_proyecto = $id_proyecto;
+        $this->nombre = $nombre;
+        $this->ubicacion = $ubicacion;
+        $this->id_cuadrilla = $id_cuadrilla;
+        $this->fecha = $fecha;
+    }
+
     public function getId()
     {
         return $this->id;

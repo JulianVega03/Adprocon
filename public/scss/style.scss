@@ -16,6 +16,8 @@ $vinotinto: #B80000;
 @import "modal/modal";
 @import "modulosmenu/menu";
 @import "rendimientoMO/contenido";
+@import "manoobrayconsumo/contenido";
+@import "formato4/contenido";
 
 *
 {
@@ -31,6 +33,10 @@ $vinotinto: #B80000;
 
 body
 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
     overflow-x: hidden;
     position: relative;
 }
@@ -38,4 +44,64 @@ body
 .contenedor-body
 {
     position: relative;
+}
+
+.actividad__content .table-rendimiento
+{
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.tabla-rendimiento-informe
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+}
+
+.tabla-rendimiento-informe div
+{
+    border: 1px solid black;
+    // border-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.tabla-rendimiento-informe div p
+{
+    // border: 1px solid black;
+    margin: 0 auto;
+}
+
+.tablaazul
+{
+    background-color: #C9E8E8;
+}
+
+.directioncolumn
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.directioncolumn div
+{
+    // display: flex;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.directioncolumn div p
+{
+    margin: 0 auto;
+    text-align: center;
+    border-right: 1px solid black;
+    padding: 5px 0;
+    width: 50%;
+}
+
+.horas
+{
+
 }

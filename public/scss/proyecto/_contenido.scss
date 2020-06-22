@@ -100,6 +100,7 @@
 
 .vista-proyecto__table
 {
+    min-height: 500px;
     width: 100%;
 }
 
@@ -168,7 +169,22 @@
     width: 150px;
 }
 
+.icos-funciones2
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+
 .icos-funciones a i
+{
+    cursor: pointer;
+    font-size: 28px;
+    transition: .5s;
+}
+
+.icos-funciones2 a i
 {
     cursor: pointer;
     font-size: 28px;

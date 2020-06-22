@@ -17,7 +17,7 @@ class ProyectosController extends Controller
             'personas' => $this->obtenerPersonas(),
             'proyectos' => $this->obtenerProyectos()
         ];
-        $this->view('proyectos', $datos);
+        $this->view('home/perfil', $datos);
     }
 
     public function actionNuevo()
@@ -50,6 +50,16 @@ class ProyectosController extends Controller
         } else {
             header('location: ' . URL);
         }
+    }
+
+    public function actionEditar($params)
+    {
+        //no hay modal
+    }
+
+    public function actionIngresar($params)
+    {
+        header('location: ' . URL . 'proyecto/' . $params[0]);
     }
 
     private function obtenerPersonas()
