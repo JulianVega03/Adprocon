@@ -8,7 +8,7 @@ class UsuarioModel extends Model
     public function existeUsuario($username, $pass)
     {
         $item = new Usuario();
-        $query = $this->db->connect()->prepare("SELECT * FROM Usuario WHERE username = :user and contrasena = :pass");
+        $query = $this->db->connect()->prepare("SELECT * FROM usuario WHERE username = :user and contrasena = :pass");
         try {
             $query->execute([
                 'user' => $username,

@@ -49,7 +49,7 @@ class ActividadModel extends Model
         $item = new Actividad();
         $query = $this->db->connect()->prepare("SELECT * FROM actividad WHERE id = :id");
         try {
-            $query->execute($id);
+            $query->execute(['id' => $id]);
 
             while ($row = $query->fetch()) {
                 $item->setId($row['id']);

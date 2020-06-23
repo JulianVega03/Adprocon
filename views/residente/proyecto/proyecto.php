@@ -4,48 +4,9 @@ require 'views/residente/layouts/header.php';
 
 <section class="vista-proyecto">
     <article class="vista-proyecto__content">
-        <div class="vista-proyecto__left">
-            <div class="vista-proyecto-menu">
-                <h2 class="">Módulos del proyecto</h2>
-                <div class="menu-modulos">
-                    <a class="abrir-controlconcretos" href="">
-                        <i class="fas fa-arrow-alt-circle-down"></i> Control de concretos premezclados.
-                    </a>
-                    <div class="sublista">
-                        <li>
-                            <i class="fas fa-chevron-right"></i> Rendimiento de mano de obra
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i> Control de Materiales
-                        </li>
-                    </div>
-
-                    <a class="abrir-manoDeObra" href="">
-                        <i class="fas fa-arrow-alt-circle-down"></i> Mano de obra y consumo de material.
-                    </a>
-                    <div class="sublista sublista2">
-                        <li>
-                            <i class="fas fa-chevron-right"></i> Rendimiento de mano de obra
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i> Control de Materiales
-                        </li>
-                    </div>
-
-                    <a class="abrir-ControlAlquiler" href="">
-                        <i class="fas fa-arrow-alt-circle-down"></i> Control de alquiler de maquinaria.
-                    </a>
-                    <div class="sublista sublista3">
-                        <li>
-                            <i class="fas fa-chevron-right"></i> Rendimiento de mano de obra
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i> Control de Materiales
-                        </li>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+        require 'views/residente/layouts/aside.php';
+        ?>
 
         <div class="vista-proyecto__right">
             <div class="vista-proyecto__right__content">
@@ -89,15 +50,50 @@ require 'views/residente/layouts/header.php';
                                     <td><?= $actividad->getId_cuadrilla() ?></td>
                                     <td><?= $actividad->getFecha() ?></td>
                                     <td>
-                                        <a href="">
+                                        <!-- <a href="">
                                             <i class="far fa-file-pdf"></i>
-                                        </a>&nbsp;&nbsp;
+                                        </a> -->
+                                        &nbsp;&nbsp;
                                         <a href="<?= URL ?>actividad/<?= $actividad->getId() ?>">
                                             <i class="far fa-eye"></i>
                                         </a>&nbsp;&nbsp;
+
+
                                         <a href="">
-                                            <i class="far fa-edit"></i>
-                                        </a>&nbsp;&nbsp;
+                                            <i class="far fa-edit abriredit"></i>
+                                        </a>
+
+                                        <div class="editar">
+                                            <div class="modal__content">
+                                                <form action="<?=URL?>proyecto/editar" method="post">
+                                                    <p>Editar actividad</p>
+                                                    <div>
+                                                        <input type="number" placeholder="Código proyecto" id="codeproyecto" name="codigo" readonly value="<?= $actividad->getId() ?>" required readonly>
+                                                    </div>
+                                                    <div>
+                                                        <input type="number" placeholder="Código proyecto" id="codeproyecto" name="proyecto" readonly value="<?= $actividad->getId_proyecto() ?>" required readonly>
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" placeholder="Nombre" id="nombreproyecto" name="nombre" value="<?= $actividad->getNombre() ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" placeholder="Ubicación" id="ubicacion" name="ubicacion" value="<?= $actividad->getUbicacion() ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" placeholder="Cuadrilla" id="cuadrilla" name="cuadrilla" value="<?= $actividad->getId_cuadrilla() ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" placeholder="Fecha" id="fecha" name="fecha" required value="<?= $actividad->getFecha() ?>">
+                                                    </div>
+                                                    <button class="btn-red" type="submit">Editar</button>
+                                                    <button class="btn-gris" type="reset">Borrar información</button>
+                                                    <i class="fas fa-times-circle cerraredit"></i>
+                                                </form>
+                                            </div>
+                                        </div>
+
+
+                                        &nbsp;&nbsp;
                                         <a href="<?= URL ?>proyecto/eliminar/<?= $actividad->getId() ?>/<?= $actividad->getId_proyecto() ?>">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
@@ -149,6 +145,10 @@ require 'views/residente/layouts/header.php';
         </form>
     </div>
 </div>
+
+
+
+<script src="<?= URL ?>public/js/edit.js"></script>
 
 <?php
 require 'views/residente/layouts/footer.php';

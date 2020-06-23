@@ -3,58 +3,9 @@ require 'views/residente/layouts/header.php';
 ?>
 <section class="vista-proyecto">
     <article class="vista-proyecto__content">
-        <div class="vista-proyecto__left">
-            <div class="vista-proyecto-menu">
-                <h2 class="">Módulos del proyecto</h2>
-                <div class="menu-modulos">
-                    <a class="abrir-controlconcretos" href="">
-                        <i class="fas fa-arrow-alt-circle-down"></i>
-                        Control de concretos premezclados.
-                    </a>
-                    <div class="sublista">
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            Rendimiento de mano de obra
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            Control de Materiales
-                        </li>
-                    </div>
-
-                    <a class="abrir-manoDeObra" href="">
-                        <i class="fas fa-arrow-alt-circle-down"></i>
-                        Mano de obra y consumo de material.
-                    </a>
-                    <div class="sublista sublista2">
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            Rendimiento de mano de obra
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            Control de Materiales
-                        </li>
-                    </div>
-
-                    <a class="abrir-ControlAlquiler" href="">
-                        <i class="fas fa-arrow-alt-circle-down"></i>
-                        Control de alquiler de maquinaria.
-                    </a>
-                    <div class="sublista sublista3">
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            Rendimiento de mano de obra
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            Control de Materiales
-                        </li>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <?php
+        require 'views/residente/layouts/aside.php';
+        ?>
         <div class="vista-proyecto__right">
             <div class="vista-proyecto__right__content">
                 <div class="vista-proyecto__title">
@@ -106,34 +57,6 @@ require 'views/residente/layouts/header.php';
                         <tbody class="">
                             <tr>
                                 <th class="oscuro">1</th>
-                                <td>12345</td>
-                                <td>Construcción segundo piso</td>
-                                <td>Universidad Francisco de Paula Santander</td>
-                                <td>Cuadrilla Dos</td>
-                            </tr>
-                            <tr>
-                                <th class="oscuro">2</th>
-                                <td>12345</td>
-                                <td>Construcción segundo piso</td>
-                                <td>Universidad Francisco de Paula Santander</td>
-                                <td>Cuadrilla Dos</td>
-                            </tr>
-                            <tr>
-                                <th class="oscuro">3</th>
-                                <td>12345</td>
-                                <td>Construcción segundo piso</td>
-                                <td>Universidad Francisco de Paula Santander</td>
-                                <td>Cuadrilla Dos</td>
-                            </tr>
-                            <tr>
-                                <th class="oscuro">4</th>
-                                <td>12345</td>
-                                <td>Construcción segundo piso</td>
-                                <td>Universidad Francisco de Paula Santander</td>
-                                <td>Cuadrilla Dos</td>
-                            </tr>
-                            <tr>
-                                <th class="oscuro">5</th>
                                 <td>12345</td>
                                 <td>Construcción segundo piso</td>
                                 <td>Universidad Francisco de Paula Santander</td>

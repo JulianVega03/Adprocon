@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container__index">
+    <!-- <div class="container__index"> -->
         <header class="header">
             <nav class="header__content">
                 <figure class="header__fig">
@@ -53,7 +53,7 @@
                 <p class="footer__text--bold"> © 2020 Obras civiles.</p>
             </p>
         </footer>
-    </div>
+    <!-- </div> -->
     <script src="<?= URL ?>public/js/main.js"></script>
 </body>
 

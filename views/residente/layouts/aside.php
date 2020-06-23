@@ -6,7 +6,7 @@
                 <i class="fas fa-arrow-alt-circle-down"></i>
                 Control de concretos premezclados.
             </a>
-            <div class="sublista">
+            <!-- <div class="sublista">
                 <li>
                     <i class="fas fa-chevron-right"></i>
                     Rendimiento de mano de obra
@@ -15,7 +15,7 @@
                     <i class="fas fa-chevron-right"></i>
                     Control de Materiales
                 </li>
-            </div>
+            </div> -->
 
             <a class="abrir-manoDeObra" href="">
                 <i class="fas fa-arrow-alt-circle-down"></i>
@@ -24,11 +24,11 @@
             <div class="sublista sublista2">
                 <li>
                     <i class="fas fa-chevron-right"></i>
-                    Rendimiento de mano de obra
+                    <a href="<?=URL?>manoObra">Rendimiento de mano de obra</a>
                 </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
-                    Control de Materiales
+                    <a href="<?=URL?>controlmaterial">Control de Materiales</a>
                 </li>
             </div>
 
@@ -39,11 +39,7 @@
             <div class="sublista sublista3">
                 <li>
                     <i class="fas fa-chevron-right"></i>
-                    Rendimiento de mano de obra
-                </li>
-                <li>
-                    <i class="fas fa-chevron-right"></i>
-                    Control de Materiales
+                   <a href="<?=URL?>controlmaquinaria"> Registro de alquiler</a>
                 </li>
             </div>
         </div>

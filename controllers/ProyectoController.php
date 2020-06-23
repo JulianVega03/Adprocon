@@ -46,6 +46,27 @@ class ProyectoController extends Controller
         }
     }
 
+    public function actionEditar(){
+        if (isset($_POST['codigo'],$_POST['proyecto'], $_POST['nombre'], $_POST['ubicacion'], $_POST['cuadrilla'], $_POST['fecha'])) {
+
+            $aModel = new ActividadModel();
+
+            $id_proyecto = $_POST['proyecto'];
+            $nombre = $_POST['nombre'];
+            $ubicacion = $_POST['ubicacion'];
+            $id_cuadrilla = $_POST['cuadrilla'];
+            $fecha = $_POST['fecha'];
+
+            if ($aModel->actualizar(new Actividad($_POST['codigo'], $id_proyecto, $nombre, $ubicacion, $id_cuadrilla, $fecha))) {
+                header('location: ' . URL . 'proyecto/' . $id_proyecto);
+            } else {
+                echo "no se inserto la actividad";
+            }
+        }else{
+            echo "faltan datos";
+        }
+    }
+
     public function actionEliminar($params)
     {
         if (isset($params)) {

@@ -53,10 +53,10 @@ require 'views/residente/layouts/header.php';
                     <li><i class="far fa-file-alt"></i>Descripción</li>
                     <li><i class="far fa-calendar-alt"></i>Fecha creación</li>
                     <div class="acciones-proyecto">
-                        <div>
+                        <!-- <div>
                             <i class="fas fa-trash-alt"></i>
-                            <i class="far fa-edit"></i>
-                        </div>
+                            <i class="far fa-edit abriredit"></i>
+                        </div> -->
                         <a href="">Visualizar</a>
                     </div>
                 </div>
@@ -97,6 +97,30 @@ require 'views/residente/layouts/header.php';
     </div>
 </div>
 
+<div class="editar">
+    <div class="modal__content">
+        <form action="" method="">
+            <p>Editar proyecto</p>
+            <div>
+                <input type="number" placeholder="Código proyecto" id="codeproyecto" name="codeproyecto" value="1" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Nombre" id="nombreproyecto" name="nombreproyecto" value="proyecto 1" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Responsable" id="responsable" name="responsable" value="Camila Arias" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Ubicación" id="ubicacion" name="ubicacion" value="Sevilla" required>
+            </div>
+
+            <button class="btn-red" type="submit">Editar</button>
+            <button class="btn-gris" type="reset">Borrar información</button>
+            <i class="fas fa-times-circle cerraredit"></i>
+        </form>
+    </div>
+</div>
+
 <br>
 <br><br>
 <br>
@@ -104,7 +128,9 @@ require 'views/residente/layouts/header.php';
 <br>
 <br><br>
 
-<script src="<?= URL ?>public/"></script>
+
+<script src="<?= URL ?>public/js/addproject.js"></script>
+<script src="<?= URL ?>public/js/edit.js"></script>
 <?php
 require 'views/residente/layouts/footer.php';
 ?>

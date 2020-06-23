@@ -9,7 +9,7 @@ require 'views/residente/layouts/header.php';
                 <!-- <div class="actividad-titles__project"> -->
                 <h4 class="actividad-titles__project">
                     Proyecto:
-                    <p>Gestion de Obras civiles</p>
+                    <p><?= $proyecto->getNombre() ?></p>
                 </h4>
                 <!-- </div> -->
                 <!-- <div class="actividad-titles__name"> -->
@@ -17,7 +17,7 @@ require 'views/residente/layouts/header.php';
                     <i class="fas fa-chevron-right"></i>
                     Actividad:
                     <span>
-                        <p>Construcción segundo piso</p>
+                        <p><?= $actividad->getNombre() ?></p>
                     </span>
                 </h1>
                 <!-- </div> -->
@@ -39,87 +39,114 @@ require 'views/residente/layouts/header.php';
                 </span>
                 <p class="abrir">Agregar suministro de concreto</p>
             </div>
-            <div class="icos-funciones">
+            <!-- <div class="icos-funciones">
                 <i class="far fa-file-pdf"></i>
                 <i class="far fa-eye"></i>
-                <i class="far fa-edit"></i>
+                <i class="far fa-edit abriredit"></i>
                 <i class="far fa-trash-alt"></i>
-            </div>
+            </div> -->
         </div>
         <table class="">
             <thead class="">
                 <tr class="">
                     <th>#</th>
-                    <th>Código Proyecto</th>
-                    <th>Nombre</th>
-                    <th>Ubicación</th>
-                    <th>Cuadrilla</th>
+                    <th>Id actividad</th>
+                    <th>Empresa concretera</th>
+                    <th>Elemnto vaciado</th>
                     <th>Fecha</th>
+                    <th>Sello de seguridad</th>
+                    <th>Hora salida</th>
+                    <th>Hora fin</th>
+                    <th>Volumen</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody class="">
                 <tr>
                     <th class="oscuro">1</th>
-                    <td>12345</td>
-                    <td>Construcción segundo piso</td>
-                    <td>Universidad Francisco de Paula Santander</td>
-                    <td>Cuadrilla Dos</td>
-                    <td>2020/06/09</td>
-                </tr>
-                <tr>
-                    <th class="oscuro">2</th>
-                    <td>12345</td>
-                    <td>Construcción segundo piso</td>
-                    <td>Universidad Francisco de Paula Santander</td>
-                    <td>Cuadrilla Dos</td>
-                    <td>2020/06/09</td>
-                </tr>
-                <tr>
-                    <th class="oscuro">3</th>
-                    <td>12345</td>
-                    <td>Construcción segundo piso</td>
-                    <td>Universidad Francisco de Paula Santander</td>
-                    <td>Cuadrilla Dos</td>
-                    <td>2020/06/09</td>
-                </tr>
-                <tr>
-                    <th class="oscuro">4</th>
-                    <td>12345</td>
-                    <td>Construcción segundo piso</td>
-                    <td>Universidad Francisco de Paula Santander</td>
-                    <td>Cuadrilla Dos</td>
-                    <td>2020/06/09</td>
-                </tr>
-                <tr>
-                    <th class="oscuro">5</th>
-                    <td>12345</td>
-                    <td>Construcción segundo piso</td>
-                    <td>Universidad Francisco de Paula Santander</td>
-                    <td>Cuadrilla Dos</td>
-                    <td>2020/06/09</td>
+                    <td>002</td>
+                    <td>Palustre SA</td>
+                    <td>Cemento Diamante</td>
+                    <td>22/06/2020</td>
+                    <td>064</td>
+                    <td>06:34 am</td>
+                    <td>07:23 am</td>
+                    <td>200</td>
+                    <td>
+                    <div class="icos-funciones">
+                        <i class="far fa-file-pdf"></i>
+                        <i class="far fa-eye"></i>
+                        <i class="far fa-edit abriredit"></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </article>
 </section>
+
+<div class="editar">
+    <div class="modal__content">
+        <form action="" method="">
+            <p>Editar suministro</p>
+            <div>
+                <input type="number" placeholder="Id actividad" id="codeproyecto" name="codeproyecto" value="1" readonly required>
+            </div>
+            <div>
+                <input type="text" placeholder="Empresa concretera" id="nombreproyecto" name="nombreproyecto" value="Palustre SA" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Elemnto vaciado" id="ubicacion" name="ubicacion" value="Cemento Diamante" required>
+            </div>
+            <div>
+                <input type="date" placeholder="Fecha" id="cuadrilla" name="cuadrilla" value="22/06/2020" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Sello de seguridad" id="fecha" name="fecha" value="064" required>
+            </div>
+            <div>
+                <input type="date" placeholder="Hora salida" id="cuadrilla" name="cuadrilla" value="06:34 am" required>
+            </div>
+            <div>
+                <input type="date" placeholder="Hora fin" id="cuadrilla" name="cuadrilla" value="07:23 am" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Volumen" id="cuadrilla" name="cuadrilla" value="200" required>
+            </div>
+            <button class="btn-red" type="submit">Editar</button>
+            <button class="btn-gris" type="reset">Borrar información</button>
+            <i class="fas fa-times-circle cerraredit"></i>
+        </form>
+    </div>
+</div>
 <div class="modal">
     <div class="modal__content">
         <form action="" method="">
             <p>Agregar suministro</p>
             <div>
-                <input type="number" placeholder="Código proyecto" id="codeproyecto" name="codeproyecto" required>
+                <input type="number" placeholder="Id actividad" id="codeproyecto" name="codeproyecto" required>
             </div>
             <div>
-                <input type="text" placeholder="Nombre" id="nombreproyecto" name="nombreproyecto" required>
+                <input type="text" placeholder="Empresa concretera" id="nombreproyecto" name="nombreproyecto" required>
             </div>
             <div>
-                <input type="text" placeholder="Ubicación" id="ubicacion" name="ubicacion" required>
+                <input type="text" placeholder="Elemnto vaciado" id="ubicacion" name="ubicacion" required>
             </div>
             <div>
-                <input type="text" placeholder="Cuadrilla" id="cuadrilla" name="cuadrilla" required>
+                <input type="date" placeholder="Fecha" id="cuadrilla" name="cuadrilla" required>
             </div>
             <div>
-                <input type="date" placeholder="Fecha" id="fecha" name="fecha" required>
+                <input type="text" placeholder="Sello de seguridad" id="fecha" name="fecha" required>
+            </div>
+            <div>
+                <input type="date" placeholder="Hora salida" id="cuadrilla" name="cuadrilla" required>
+            </div>
+            <div>
+                <input type="date" placeholder="Hora fin" id="cuadrilla" name="cuadrilla" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Volumen" id="cuadrilla" name="cuadrilla" required>
             </div>
             <button class="btn-red" type="submit">Agregar</button>
             <button class="btn-gris" type="reset">Borrar información</button>
@@ -127,6 +154,14 @@ require 'views/residente/layouts/header.php';
         </form>
     </div>
 </div>
+
+
+
+<!-- <script src="../js/addproject.js"></script>
+    <script src="../js/edit.js"></script> -->
+
+    <script src="<?= URL ?>public/js/addproject.js"></script>
+    <script src="<?= URL ?>public/js/edit.js"></script>
 
 <?php
 require 'views/residente/layouts/footer.php';
